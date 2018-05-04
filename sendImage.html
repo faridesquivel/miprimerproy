@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Transmisor Imagen</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <!-- Latest compiled and minified CSS -->
+    
+    <script src="quiet.js"></script>
+    <script src="sendImage.js"></script>
+    <script src="quiet-emscripten.js"></script>
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="page-header">
+          
+        </h1>    
+    </div>
+    <div class="container">
+        <h1 class="page-header ph1">
+                <small>Universidad Autónoma del Estado de México</small> <br>
+                <small>Facultad de Ingeniería</small>
+        </h1>    
+    </div>
+    <div class="container-fluid text-center je">
+        <h1>Transmisor de Imagen</h1>
+        <h4>Escuchando...</h2>
+        <section>
+        <div class="hidden" data-quiet-warning></div>
+        </section>
+        <label class="btn btn-primary btn-file">
+            Buscar Imagen <input type="file" style="display: none;"  data-quiet-file-input onchange="loadFile(event)"> 
+        </label>
+        <div class="container">
+            <img id="output" style="max-width: 300px; padding: 10px"/>
+        </div>
+        <script>
+            var loadFile = function(event) {
+                var output = document.getElementById('output');
+                output.src = URL.createObjectURL(event.target.files[0]);
+            };
+        </script>
+        <div class="alert alert-danger hidden" data-quiet-receive-image-warning=""></div>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary" data-quiet-send-image-button data-quiet-sending-text="Enviando..." data-quiet-profile-name="cable-64k">
+                Enviar
+            </button>
+        </div>
+    </div>
+  </body>
+</html>
