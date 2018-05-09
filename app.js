@@ -7,6 +7,10 @@ var PORT = 3000;
 
 app.use(express.static('public'));
 
+app.get("/", function(req, res){
+    res.sendFile(__dirname + "/home.html");
+});
+
 app.get("/enviarTexto", function (req, res) {
     res.sendFile(__dirname + "/sendtext.html");
 });
