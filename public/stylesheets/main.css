@@ -1,10 +1,10 @@
 body {
-    color: white;
-    background-color: #333333;
+    color: #FFD6A0;
+    background-color: #28544B;
 }
 
 .je {
-    padding-top: 20vh;
+    padding-top: 10vh;
 }
 
 .ph1 {
@@ -13,11 +13,24 @@ body {
 
 .a1 {
     margin-top: 4vh;
-    margin-left: 2vh;
     padding: 3vh;
 }
 
 .fac {
     padding-top: 20vh;
     font-size: 30px;
+    color: #FFD6A0;
+}
+
+.rec {
+    font-size: 15px;
+    color: #ACBD86;
+}
+
+pre {
+    background-color: #FFD6A0;
+}
+
+#v {
+    float: right;
 }
