@@ -1,7 +1,5 @@
 var express = require("express");
 var app = express();
-var server = require('http').createServer(app);
-var io = require('socket.io').listen(server);
 
 var PORT = 3000;
 
@@ -33,4 +31,4 @@ app.listen(PORT, function (err) {
         console.log("No se pudo iniciar el servidor...");
     }
     console.log("Server running on port " + PORT);
-})
+});
