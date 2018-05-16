@@ -26,7 +26,7 @@ app.get("/recibirImagen", function (req, res){
 });
 
 
-app.listen(PORT, function (err) {
+app.listen(process.env.PORT, process.env.IP, function (err) {
     if(err) {
         console.log("No se pudo iniciar el servidor...");
     }
